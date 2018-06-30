@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.project.acer_pc.myapplication.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <com.google.vr.sdk.widgets.pano.VrPanoramaView
+            android:id="@+id/vr_pan_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            >
+
+            <TextView
+                android:id="@+id/imageinfo"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:textColor="@color/white"/>
+        </com.google.vr.sdk.widgets.pano.VrPanoramaView>
+
+        <TextView
+            android:id="@+id/tvResults"
+            android:layout_width="match_parent"
+            android:layout_height="180dp" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/select"
+        android:background="@drawable/gallery"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bClick"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginStart="100dp"
+        android:background="@drawable/take"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bDone"
+        app:layout_constraintStart_toEndOf="@+id/select" />
+
+    <Button
+        android:id="@+id/bDone"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/stitch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
